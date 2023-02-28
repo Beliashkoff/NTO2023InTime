@@ -2064,6 +2064,54 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Custom",
+            "id": "28f40958-69b7-436f-b3c2-5fba48a0ccf9",
+            "actions": [
+                {
+                    "name": "Interaction Mode Switcher Left",
+                    "type": "Button",
+                    "id": "3d73f8ed-fef6-462f-b671-d244e1f62b9c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Interaction Mode Switcher Right",
+                    "type": "Button",
+                    "id": "70c6ee2e-e761-4e7a-91c9-f821ccf9280a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "824f4bd3-21f4-48d5-b9d8-f08431b3cac8",
+                    "path": "<XRController>{LeftHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interaction Mode Switcher Left",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "36192c6a-b443-468f-8157-08361df4d7c5",
+                    "path": "<XRController>{RightHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interaction Mode Switcher Right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
