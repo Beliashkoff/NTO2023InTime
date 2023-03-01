@@ -5,6 +5,8 @@ using UnityEngine.Rendering;
 
 public class WaterController : MonoBehaviour
 {
+	public float powerUp;
+	public float powerForward;
 	private PlayerController playerController;
 	private void Start()
 	{
@@ -16,5 +18,13 @@ public class WaterController : MonoBehaviour
         {
 			playerController.staminaChanger = -9f;
         }
+	}
+	private void OnTriggerStay(Collider other)
+	{
+		if (other.tag == "Interact Obj")
+		{
+			other.GetComponent<Rigidbody>().AddForce(transform.up * powerUp);
+			other.GetComponent<Rigidbody>().AddForce(transform.forward * powerForward);
+		}
 	}
 }

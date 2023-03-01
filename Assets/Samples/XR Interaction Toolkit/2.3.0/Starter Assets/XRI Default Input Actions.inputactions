@@ -2086,6 +2086,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Left Velocity",
+                    "type": "Value",
+                    "id": "402f2256-7f6f-4df3-86c3-c952ca99cb1a",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Right Velocity",
+                    "type": "Value",
+                    "id": "9e3690c9-70ea-45c2-96b7-ec15e5d30ac8",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -2108,6 +2126,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Interaction Mode Switcher Right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "96b36602-ad31-42b0-b44f-4dd4dfa12070",
+                    "path": "<ViveController>{LeftHand}/devicePose/velocity",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Left Velocity",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "eee3a993-5338-49f9-aa4a-902107dcd2b9",
+                    "path": "<ViveController>{RightHand}/devicePose/velocity",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Right Velocity",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
