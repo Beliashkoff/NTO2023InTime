@@ -10,7 +10,7 @@ public class ClimvInterecteble : XRBaseInteractable
 		base.OnSelectEntered(interactor);
 		if (interactor is XRDirectInteractor)
 		{
-			Climber.climbingHand = interactor.GetComponent<ActionBasedController>();
+			Climber.climbingHand = interactor.GetComponentInParent<ActionBasedController>();
 		}
 			
 	}
@@ -23,7 +23,6 @@ public class ClimvInterecteble : XRBaseInteractable
 			{
 				Climber.climbingHand = null;
 				Climber.isExited = true;
-				
 			}
 		}
 	}

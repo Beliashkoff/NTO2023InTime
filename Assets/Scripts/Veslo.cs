@@ -17,6 +17,6 @@ public class Veslo : MonoBehaviour
     void Update()
     {
         velocity = velocityRef.action.ReadValue<Vector3>();
-        Debug.Log(velocity);    
+        //Debug.Log(velocity);    
 	}
 }

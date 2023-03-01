@@ -129,7 +129,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh23660
+  m_Name: pb_Mesh23712
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -445,7 +445,7 @@ Transform:
   m_LocalScale: {x: 0.13766338, y: 0.57842773, z: 0.13766338}
   m_Children: []
   m_Father: {fileID: 2093356669}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!54 &259328912
 Rigidbody:
@@ -1027,7 +1027,7 @@ Transform:
   m_LocalScale: {x: 0.13766338, y: 0.57842773, z: 0.13766338}
   m_Children: []
   m_Father: {fileID: 2093356669}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!54 &953181027
 Rigidbody:
@@ -1713,7 +1713,7 @@ Transform:
   m_LocalScale: {x: 0.13766338, y: 0.57842773, z: 0.13766338}
   m_Children: []
   m_Father: {fileID: 2093356669}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!54 &1360272700
 Rigidbody:
@@ -83206,11 +83206,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 2093356669}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 5191770b88d7f9b42bdefea615254fd4, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5191770b88d7f9b42bdefea615254fd4, type: 3}
       propertyPath: m_LocalScale.x
@@ -83230,11 +83230,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5191770b88d7f9b42bdefea615254fd4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.23
+      value: 0.93
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5191770b88d7f9b42bdefea615254fd4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.75
+      value: 4.55
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5191770b88d7f9b42bdefea615254fd4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -83453,7 +83453,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1800505562}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -83796,7 +83796,6 @@ Transform:
   - {fileID: 6687272309462430303}
   - {fileID: 1061643957}
   - {fileID: 2059029094}
-  - {fileID: 1800505561}
   - {fileID: 259328911}
   - {fileID: 953181026}
   - {fileID: 1360272699}
@@ -83810,7 +83809,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2093356668}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c285c55f25fb2d4abb562f071740b62, type: 3}
   m_Name: 
@@ -83921,7 +83920,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6687272310012114748}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6687272309118721897
 MonoBehaviour:
@@ -84076,7 +84075,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!120 &6687272309118721902
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -84328,8 +84327,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 6687272310314504251}
   - {fileID: 6687272310034583754}
+  - {fileID: 6687272310314504251}
   m_Father: {fileID: 6687272310761534104}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -84812,7 +84811,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6687272310012114748}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6687272309934996241
 MonoBehaviour:
@@ -84826,7 +84825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4253f32900bcc4d499d675566142ded0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 1992529808}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -84940,7 +84939,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!135 &6687272309934996246
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -84980,8 +84979,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 6687272309118721896}
   - {fileID: 6687272309934996240}
+  - {fileID: 6687272309118721896}
   m_Father: {fileID: 6687272310761534104}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -85198,7 +85197,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!135 &6687272310034583752
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -85224,7 +85223,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6687272309431190720}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6687272310034583755
 MonoBehaviour:
@@ -85238,7 +85237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4253f32900bcc4d499d675566142ded0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 1992529808}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -85586,7 +85585,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6687272310314504251
 Transform:
   m_ObjectHideFlags: 0
@@ -85599,7 +85598,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6687272309431190720}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6687272310314504254
 MonoBehaviour:

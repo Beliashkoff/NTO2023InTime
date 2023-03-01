@@ -25,9 +25,10 @@ public class Climber : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        if (climbingHand)
+		Debug.Log(velocityPropertyRight.action.ReadValue<Vector3>());
+		if (climbingHand)
         {
-            if (climbingHand.name == "RightHand Controller")
+			if (climbingHand.name == "RightHand Controller")
             {
                 Velocity = velocityPropertyRight.action.ReadValue<Vector3>();
                 Velocity = new Vector3(Velocity.x, -Velocity.y, Velocity.z);
@@ -36,18 +37,13 @@ public class Climber : MonoBehaviour
             {
                 Velocity = velocityPropertyLeft.action.ReadValue<Vector3>();
                 Velocity = new Vector3(Velocity.x, -Velocity.y, Velocity.z);
-            }
-
-            
-
+			}
             Climb();
         }
     }
     void Climb()
     {
-        
         character.Move(Velocity * Time.fixedDeltaTime);
-        //character.gameObject.GetComponent<Rigidbody>().velocity = Velocity * bounce;
-
+        //character.gameObject.GetComponent<Rigidbody>().velocity = Velocity;
     }
 }
