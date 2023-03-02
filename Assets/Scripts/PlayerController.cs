@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Rendering.Universal;
+using UnityEngine.Rendering;
 
 public class PlayerController : MonoBehaviour
 {
@@ -19,6 +21,8 @@ public class PlayerController : MonoBehaviour
 
     private float staminaChangeTime = 0;
     private float healthChangeTime = 0;
+    public Volume volume;
+    private Vignette vignette;
 	void Start()
     {
         oldStaminaChanger = staminaChanger;
@@ -27,7 +31,11 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-
+        if (healtBar == null)
+        {
+            healtBar = GameObject.FindGameObjectWithTag("health bar").GetComponent<Image>();
+            staminaBar = GameObject.FindGameObjectWithTag("stamina bar").GetComponent<Image>();
+        }
 		if (stamina > 100)
             stamina= 100;
 		else if (stamina < 0)
@@ -49,6 +57,7 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Game Over");
         }
+        VignetteUpdate();
 
 
 		if (staminaChanger != oldStaminaChanger)
@@ -74,4 +83,11 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(6);
 		staminaChanger = -0.6f;
 	}
+    private void VignetteUpdate()
+    {
+        if (volume.profile.TryGet(out vignette))
+        {
+            vignette.intensity.value = Mathf.Clamp(1 - stamina / 100 +0.2f, 0.2f, 0.6f);
+        }
+    }
 }

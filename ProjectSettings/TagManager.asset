@@ -3,17 +3,24 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Interact Obj
+  - PhysicHand
+  - health bar
+  - stamina bar
+  - Raft
+  - veslo
+  - Water
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Interaction Obj
+  - Raft
+  - Hand
   - 
   - 
   - 

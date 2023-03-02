@@ -25,18 +25,17 @@ public class Climber : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-		Debug.Log(velocityPropertyRight.action.ReadValue<Vector3>());
 		if (climbingHand)
         {
 			if (climbingHand.name == "RightHand Controller")
             {
                 Velocity = velocityPropertyRight.action.ReadValue<Vector3>();
-                Velocity = new Vector3(Velocity.x, -Velocity.y, Velocity.z);
+                Velocity = new Vector3(0, Velocity.y, 0);
             }
             if (climbingHand.name == "LeftHand Controller")
             {
                 Velocity = velocityPropertyLeft.action.ReadValue<Vector3>();
-                Velocity = new Vector3(Velocity.x, -Velocity.y, Velocity.z);
+                Velocity = new Vector3(0, Velocity.y, 0);
 			}
             Climb();
         }
