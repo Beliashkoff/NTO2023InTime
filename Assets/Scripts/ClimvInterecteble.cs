@@ -10,21 +10,16 @@ public class ClimvInterecteble : XRBaseInteractable
 		base.OnSelectEntered(interactor);
 		if (interactor is XRDirectInteractor)
 		{
-			Climber.climbingHand = interactor.GetComponent<ActionBasedController>();
+			Climber.climbingHand = interactor.GetComponentInParent<ActionBasedController>();
 		}
-			
 	}
 	protected override void OnSelectExited(XRBaseInteractor interactor)
 	{
 		base.OnSelectExited(interactor);
 		if (interactor is XRDirectInteractor)
 		{
-			if(Climber.climbingHand && Climber.climbingHand.name == interactor.name)
-			{
-				Climber.climbingHand = null;
-				Climber.isExited = true;
-				
-			}
+			Climber.climbingHand = null;
+			Climber.isExited = true;
 		}
 	}
 }

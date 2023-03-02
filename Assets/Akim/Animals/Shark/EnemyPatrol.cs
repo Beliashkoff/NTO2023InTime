@@ -1,36 +1,89 @@
-
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyPatrol : MonoBehaviour
 {
-    // Список объектов, в которых будет происходить патрулирование
-    public List<GameObject> patrolPoints;
-    // Индекс текущей точки патрулирования
-    private int currentPointIndex;
-    // Скорость патрулирования
-    public float speed;
 
-    void Start()
-    {
-        // Начинаем патрулирование с первой точки
-        currentPointIndex = 0;
-    }
+	public List<GameObject> patrolPoints;
+	public float speed;
+	public float viewRange;
+	public float stopDistance;
+	public float rotationSpeed;
 
-    void Update()
-    {
-        // Если достигнута текущая точка патрулирования, переходим к следующей
-        if (Vector3.Distance(transform.position, patrolPoints[currentPointIndex].transform.position) < 0.1f)
-        {
-            currentPointIndex++;
-            currentPointIndex %= patrolPoints.Count;
-        }
+	private int currentPoint;
+	private GameObject player;
+	public bool isHit = false;
+	private bool isDamaging = false;
+	private RaftController raftController;
+	private void Start()
+	{
+		raftController= FindObjectOfType<RaftController>();
+		currentPoint = 0;
+		player = GameObject.FindGameObjectWithTag("Player");
+	}
 
-        // Направляем объект к точке назначения
-        Vector3 direction = patrolPoints[currentPointIndex].transform.position - transform.position;
-        transform.forward = Vector3.RotateTowards(transform.forward, direction, speed * Time.deltaTime, 0.0f);
+	private void Update()
+	{
+		// Проверяем, находится ли игрок в зоне видимости врага
+		if (Vector3.Distance(transform.position, player.transform.position) < viewRange && !isHit)
+		{
+			// Если да, то притягиваем врага к игроку
+			Vector3 direction = player.transform.position - transform.position;
+			direction.y = 0.3f;
+			transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), rotationSpeed * Time.deltaTime);
 
-        // Двигаем объект по направлению
-        transform.position = Vector3.MoveTowards(transform.position, patrolPoints[currentPointIndex].transform.position, speed * Time.deltaTime);
-    }
+			if (direction.magnitude > stopDistance)
+			{
+				transform.Translate(0, 0, speed * Time.deltaTime);
+			}
+			if(Vector3.Distance(transform.position, player.transform.position) <= stopDistance + 0.1f && !isDamaging)
+			{
+				isDamaging = true;
+				GiveDamage();
+			}
+		}
+		else
+		{
+			// Если нет, то патрулируем по указанным точкам
+			Vector3 direction = patrolPoints[currentPoint].transform.position - transform.position;
+			direction.y = 0;
+			transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), rotationSpeed * Time.deltaTime);
+
+			if (direction.magnitude < 0.5f)
+			{
+				currentPoint++;
+				if (currentPoint >= patrolPoints.Count)
+				{
+					currentPoint = 0;
+				}
+			}
+			else
+			{
+				transform.Translate(0, 0, speed * Time.deltaTime);
+			}
+		}
+	}
+
+	private IEnumerator WaitAndPrint(float waitTime)
+	{
+		yield return new WaitForSeconds(waitTime);
+		isDamaging = false;
+	}
+
+	public void GiveDamage()
+	{
+		if (isDamaging)
+		{
+			raftController.Damage();
+			StartCoroutine(WaitAndPrint(5));
+		}
+	}
+	private void OnTriggerEnter(Collider other)
+	{
+		if(other.tag == "veslo" || other.tag == "Interact Obj")
+		{
+			isHit = true;
+		}
+	}
 }

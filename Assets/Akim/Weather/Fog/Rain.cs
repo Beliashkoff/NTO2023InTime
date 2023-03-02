@@ -21,7 +21,7 @@ public class Rain : MonoBehaviour
 
         if (RainForce >= -150)
         {
-            audioSource.clip = RainSoundLight;                                    // сравниваем со скоростью и исходя из этого изменяем звук дождя 
+            audioSource.clip = RainSoundLight;// сравниваем со скоростью и исходя из этого изменяем звук дождя 
             audioSource.Play();
         }
         else if (RainForce >= -450)

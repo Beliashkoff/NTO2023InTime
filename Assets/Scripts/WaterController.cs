@@ -26,5 +26,14 @@ public class WaterController : MonoBehaviour
 			other.GetComponent<Rigidbody>().AddForce(transform.up * powerUp);
 			other.GetComponent<Rigidbody>().AddForce(transform.forward * powerForward);
 		}
+		else if(other.tag == "Raft")
+		{
+			other.transform.Translate(other.transform.forward * Time.fixedDeltaTime);
+		}
+		else if (other.tag == "veslo")
+		{
+			other.GetComponent<Rigidbody>().AddForce(transform.up * powerUp);
+			other.GetComponent<Rigidbody>().AddForce(transform.forward * (powerForward+0.06f));
+		}
 	}
 }
