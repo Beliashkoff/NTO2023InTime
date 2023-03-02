@@ -165,6 +165,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5594356086811742051}
   - component: {fileID: 1650156808378191974}
+  - component: {fileID: 8168740154586686628}
   m_Layer: 0
   m_Name: fish3
   m_TagString: Fish
@@ -208,6 +209,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &8168740154586686628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5109603793788802521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79d7d68b930469f42949f38a547143d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FishPrefabs: []
+  Plot: {fileID: 0}
+  Waypoints: []
+  waypoints: []
+  speed: 1.2
+  rotationSpeed: 1.5
 --- !u!1 &5402530302110429857
 GameObject:
   m_ObjectHideFlags: 0
