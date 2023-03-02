@@ -9,7 +9,7 @@ public class InteractorModeSwitcher : MonoBehaviour
     public GameObject rayInteractor;
     public GameObject directInteractor;
     public InputActionReference rayAction;
-    bool isRayEnable = true;
+    bool isRayEnable = false;
 
     void Start()
     {

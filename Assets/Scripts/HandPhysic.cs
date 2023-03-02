@@ -16,7 +16,6 @@ public class HandPhysic : MonoBehaviour
     private HandCheker handCheker;
     private ActionBasedContinuousMoveProvider moveProvider;
     private ActionBasedSnapTurnProvider turnProvider;
-    private TeleportationProvider teleportationProvider;
     private Rigidbody rb;
     private Animator handAnimator;
     private bool isPhysicHandEnable = true;
@@ -28,7 +27,6 @@ public class HandPhysic : MonoBehaviour
         handCheker = GetComponent<HandCheker>();
         moveProvider = FindObjectOfType<ActionBasedContinuousMoveProvider>();
         turnProvider = FindObjectOfType<ActionBasedSnapTurnProvider>();
-        teleportationProvider = FindObjectOfType<TeleportationProvider>();
         rb = GetComponent<Rigidbody>();
         handAnimator = nonPhysicHand.GetComponent<Animator>();
         moveProvider.rightHandMoveAction.action.started += OnLocomotionBegin;
@@ -50,7 +48,6 @@ public class HandPhysic : MonoBehaviour
                     {
                         nonPhysicHand.GetComponentInChildren<Renderer>().material = xray_Mat;
                         nonPhysicHand.SetActive(true);
-                        teleportationProvider.enabled = false;
                         isPhysicHandEnable = false;
                     }
                 }
@@ -59,7 +56,6 @@ public class HandPhysic : MonoBehaviour
                     if (!isPhysicHandEnable)
                     {
                         nonPhysicHand.SetActive(false);
-                        teleportationProvider.enabled = true;
                         isPhysicHandEnable = true;
                     }
                 }
