@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 307424645}
   - component: {fileID: 307424647}
   - component: {fileID: 307424646}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Health Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 600026314}
   - component: {fileID: 600026316}
   - component: {fileID: 600026315}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Stamina Bar (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 616763547}
   - component: {fileID: 616763549}
   - component: {fileID: 616763548}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Health Bar (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 1193424935}
   - component: {fileID: 1193424937}
   - component: {fileID: 1193424936}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -370,7 +370,7 @@ GameObject:
   - component: {fileID: 1393483089}
   - component: {fileID: 1393483091}
   - component: {fileID: 1393483090}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -505,7 +505,7 @@ GameObject:
   - component: {fileID: 1421096065}
   - component: {fileID: 1421096064}
   - component: {fileID: 1421096063}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -610,7 +610,7 @@ GameObject:
   - component: {fileID: 1807924277}
   - component: {fileID: 1807924279}
   - component: {fileID: 1807924278}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -685,7 +685,7 @@ GameObject:
   - component: {fileID: 1887047796}
   - component: {fileID: 1887047798}
   - component: {fileID: 1887047797}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Stamina bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -760,7 +760,7 @@ GameObject:
   - component: {fileID: 4235663872067585935}
   - component: {fileID: 1327517497001000061}
   - component: {fileID: 3684193321089989786}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Stamina bar
   m_TagString: stamina bar
   m_Icon: {fileID: 0}
@@ -834,7 +834,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2472623087457644476}
   - component: {fileID: 2472623087457644477}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Left Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -888,7 +888,7 @@ GameObject:
   - component: {fileID: 8761428997103162470}
   - component: {fileID: 1883574578277765823}
   - component: {fileID: 2423036518596537750}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1022,7 +1022,7 @@ GameObject:
   - component: {fileID: 7087022240648311432}
   - component: {fileID: 2475217079951317482}
   - component: {fileID: 6618627382986693000}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Health Bar (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1097,7 +1097,7 @@ GameObject:
   - component: {fileID: 784321548814030365}
   - component: {fileID: 7810635718242733997}
   - component: {fileID: 499649129700359298}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1172,7 +1172,7 @@ GameObject:
   - component: {fileID: 2860723593498093363}
   - component: {fileID: 4347427111039801233}
   - component: {fileID: 4415743852604950215}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1306,7 +1306,7 @@ GameObject:
   - component: {fileID: 8066821835191126413}
   - component: {fileID: 1263985654004728569}
   - component: {fileID: 1404484397533231645}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Stamina Bar (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1381,7 +1381,7 @@ GameObject:
   - component: {fileID: 8188191716060897118}
   - component: {fileID: 1903280349634646814}
   - component: {fileID: 4094362565545005220}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Health Bar
   m_TagString: health bar
   m_Icon: {fileID: 0}
@@ -1457,7 +1457,7 @@ GameObject:
   - component: {fileID: 963874924826779023}
   - component: {fileID: 8181106821362075925}
   - component: {fileID: 853739889756306361}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}

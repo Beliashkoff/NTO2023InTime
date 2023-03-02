@@ -28,13 +28,12 @@ public class WaterController : MonoBehaviour
 		}
 		else if(other.tag == "Raft")
 		{
-			other.GetComponent<Rigidbody>().velocity = transform.forward * powerForward;
-			//other.GetComponent<Rigidbody>().AddForce(transform.up * powerUp);
+			other.transform.Translate(other.transform.forward * Time.fixedDeltaTime);
 		}
 		else if (other.tag == "veslo")
 		{
 			other.GetComponent<Rigidbody>().AddForce(transform.up * powerUp);
-			other.GetComponent<Rigidbody>().AddForce(transform.forward * (powerForward+0.05f));
+			other.GetComponent<Rigidbody>().AddForce(transform.forward * (powerForward+0.06f));
 		}
 	}
 }
