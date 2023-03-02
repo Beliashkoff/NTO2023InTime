@@ -14,10 +14,11 @@ public class EnemyPatrol : MonoBehaviour
 	private int currentPoint;
 	private GameObject player;
 	public bool isHit = false;
+	private bool isDamaging = false;
 	private RaftController raftController;
 	private void Start()
 	{
-		raftController= GetComponent<RaftController>();
+		raftController= FindObjectOfType<RaftController>();
 		currentPoint = 0;
 		player = GameObject.FindGameObjectWithTag("Player");
 	}
@@ -36,8 +37,9 @@ public class EnemyPatrol : MonoBehaviour
 			{
 				transform.Translate(0, 0, speed * Time.deltaTime);
 			}
-			if(Vector3.Distance(transform.position, player.transform.position) <= 1)
+			if(Vector3.Distance(transform.position, player.transform.position) <= stopDistance + 0.1f && !isDamaging)
 			{
+				isDamaging = true;
 				GiveDamage();
 			}
 		}
@@ -66,19 +68,22 @@ public class EnemyPatrol : MonoBehaviour
 	private IEnumerator WaitAndPrint(float waitTime)
 	{
 		yield return new WaitForSeconds(waitTime);
-		GiveDamage();
+		isDamaging = false;
 	}
 
 	public void GiveDamage()
 	{
-		raftController.Damage();
-		StartCoroutine(WaitAndPrint(5));
+		if (isDamaging)
+		{
+			raftController.Damage();
+			StartCoroutine(WaitAndPrint(5));
+		}
 	}
 	private void OnTriggerEnter(Collider other)
 	{
 		if(other.tag == "veslo" || other.tag == "Interact Obj")
 		{
-			isHit = false;
+			isHit = true;
 		}
 	}
 }

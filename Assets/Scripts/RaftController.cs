@@ -18,9 +18,19 @@ public class RaftController : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
-
+		if(other.tag == "veslo" || other.tag == "Interaction Obj" || other.tag == "Player")
+		{
+			other.transform.parent = transform;
+		}
 	}
-    public void LowerSail()
+	private void OnTriggerExit(Collider other)
+	{
+		if(other.tag == "veslo" || other.tag == "Interaction Obj" || other.tag == "Player")
+		{
+			other.transform.parent = null;
+		}
+	}
+	public void LowerSail()
     {
         if (!isSailOpen)
         {

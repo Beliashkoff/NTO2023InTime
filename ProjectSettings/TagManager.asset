@@ -12,6 +12,7 @@ TagManager:
   - veslo
   - Water
   - Terrain
+  - Fish
   layers:
   - Default
   - TransparentFX

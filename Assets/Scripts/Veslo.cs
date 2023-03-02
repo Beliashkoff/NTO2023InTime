@@ -26,7 +26,6 @@ public class Veslo : MonoBehaviour
 			velocityL =  velocityPropertyLeft.action.ReadValue<Vector3>();
 			velocityR = velocityPropertyRight.action.ReadValue<Vector3>();
 			velocity = Mathf.Max(velocityL.magnitude, velocityR.magnitude);
-			Debug.Log(velocity);
 		}
         else
             velocity = 0;
