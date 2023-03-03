@@ -16,7 +16,7 @@ public class mouth : MonoBehaviour
 			GetComponent<AudioSource>().Play();
 			other.gameObject.SetActive(false);
 			float stamina = playerController.stamina;
-			playerController.stamina += 25f;
+			playerController.staminaChanger = 0.1f;
 		}
 	}
 }

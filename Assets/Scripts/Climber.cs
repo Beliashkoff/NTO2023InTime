@@ -42,7 +42,7 @@ public class Climber : MonoBehaviour
     void Climb()
     {
         //rb.MovePosition(Vector3.up);
-        character.transform.Translate(Vector3.up * Time.fixedDeltaTime * 2);
+        character.transform.Translate(Vector3.up * Time.fixedDeltaTime * 5);
 		//character.transform.Translate(transform.forward * Time.fixedDeltaTime);
 	}
 }

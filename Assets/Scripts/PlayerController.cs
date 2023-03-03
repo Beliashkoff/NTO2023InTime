@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
         {
             GameOver();
         }
-        VignetteUpdate();
+
 
 
 		if (staminaChanger != oldStaminaChanger)
@@ -85,13 +85,6 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(6);
 		staminaChanger = -0.6f;
 	}
-    private void VignetteUpdate()
-    {
-        if (volume.profile.TryGet(out vignette))
-        {
-            vignette.intensity.value = Mathf.Clamp(1 - stamina / 100 +0.2f, 0.2f, 0.6f);
-        }
-    }
     public void GameOver()
     {
         gameOver.SetActive(true);

@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 7c66368d46092a749b6d06ee8682cbbb
+  - enabled: 1
+    path: Assets/Scenes/Rain.unity
+    guid: 1eebbf3f7e794d4499bdff6ed91e3903
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: c73b900e4bace6d4db2eee9dbcce6484, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: fc37f63718671924ab76cae3746f7bfb, type: 2}
