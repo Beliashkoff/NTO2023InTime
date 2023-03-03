@@ -1,29 +1,11 @@
 fileFormatVersion: 2
-guid: d771ca1706e2a6a4ca82d404bcdba62a
+guid: 3dc67026cf4151b438f5e82f927b27f4
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: 2805496357884584850
-    second: Hemi.001|HemiAction
-  - first:
-      74: -7980426943615974345
-    second: Hemi.001|HemiAction.001
-  - first:
-      74: -4801207812426136049
-    second: Hemi|HemiAction
-  - first:
-      74: 8037991127925941507
-    second: Hemi|HemiAction.001
-  - first:
-      74: 4781951162920444690
-    second: Armature|ArmatureAction
-  - first:
-      74: -4953757929391209794
-    second: Armature|HemiAction
-  - first:
-      74: -976381490134153761
-    second: Armature|HemiAction.001
+      74: -5172676848367077955
+    second: GLTF_created_0|ArmatureAction.006_GLTF_created_0
   externalObjects: {}
   materials:
     materialImportMode: 2

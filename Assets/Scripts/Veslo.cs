@@ -11,12 +11,14 @@ public class Veslo : MonoBehaviour
 	private Vector3 velocityR;
 	private Vector3 velocityL;
 	private float velocity;
+	public float speed = 1f;
 	private bool isInWater = false;
     public bool isGrabing = false;
+	public GameObject raft;
 	void Start()
     {
-
-    }
+		raft.transform.rotation = Quaternion.Slerp(raft.transform.rotation, Quaternion.Euler(0, -10, 0), Time.deltaTime * speed);
+	}
 
     // Update is called once per frame
     void FixedUpdate()
@@ -32,6 +34,14 @@ public class Veslo : MonoBehaviour
 	}
 	private void OnTriggerEnter(Collider other)
 	{
+		if(other.name == "Water Trigger Left")
+		{
+			raft.transform.rotation = Quaternion.Slerp(raft.transform.rotation, Quaternion.Euler(0, 30, 0), Time.deltaTime * speed);
+		}
+		else if (other.name == "Water Trigger Right")
+		{
+			raft.transform.rotation = Quaternion.Slerp(raft.transform.rotation, Quaternion.Euler(0, -30, 0), Time.deltaTime * speed);
+		}
 		if (other.tag == "Water")
         {
             isInWater = true;

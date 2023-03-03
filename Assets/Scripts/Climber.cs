@@ -28,6 +28,7 @@ public class Climber : MonoBehaviour
     {
 		if (climbingHand)
         {
+			Climb();
 			if (climbingHand.name == "RightHand Controller")
             {
                 Velocity = velocityPropertyRight.action.ReadValue<Vector3>();
@@ -36,12 +37,12 @@ public class Climber : MonoBehaviour
             {
                 Velocity = velocityPropertyLeft.action.ReadValue<Vector3>();
 			}
-            Climb();
         }
     }
     void Climb()
     {
-        character.transform.Translate(Vector3.up * -Velocity.y * Time.fixedDeltaTime * 5);
+        //rb.MovePosition(Vector3.up);
+        character.transform.Translate(Vector3.up * Time.fixedDeltaTime * 2);
 		//character.transform.Translate(transform.forward * Time.fixedDeltaTime);
 	}
 }

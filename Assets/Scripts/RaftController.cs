@@ -11,13 +11,19 @@ public class RaftController : MonoBehaviour
     public GameObject spawner;
     private bool isSailOpen  = false;
     private float speed = 1;
+	private PlayerController playerController;
 	private void FixedUpdate()
 	{
+		playerController = FindObjectOfType<PlayerController>();
 		transform.Translate(transform.forward * Time.fixedDeltaTime * speed);
 	}
 
 	private void OnTriggerEnter(Collider other)
 	{
+		if (other.tag == "Terrain")
+		{
+			playerController.GameOver();
+		}
 		if(other.tag == "veslo" || other.tag == "Interaction Obj" || other.tag == "Player")
 		{
 			other.transform.parent = transform;
@@ -62,7 +68,7 @@ public class RaftController : MonoBehaviour
 		}
 		else
 		{
-			Debug.Log("GAMEOVER");
+			playerController.GameOver();
 		}
 	}
 }

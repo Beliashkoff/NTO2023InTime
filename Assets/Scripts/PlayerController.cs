@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class PlayerController : MonoBehaviour
     private float staminaChangeTime = 0;
     private float healthChangeTime = 0;
     public Volume volume;
+    public GameObject gameOver;
     private Vignette vignette;
 	void Start()
     {
@@ -55,7 +57,7 @@ public class PlayerController : MonoBehaviour
         }
         if (health <= 0)
         {
-            Debug.Log("Game Over");
+            GameOver();
         }
         VignetteUpdate();
 
@@ -89,5 +91,15 @@ public class PlayerController : MonoBehaviour
         {
             vignette.intensity.value = Mathf.Clamp(1 - stamina / 100 +0.2f, 0.2f, 0.6f);
         }
+    }
+    public void GameOver()
+    {
+        gameOver.SetActive(true);
+        StartCoroutine(loadTimer());
+	}
+    IEnumerator loadTimer()
+    {
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene(0);
     }
 }
