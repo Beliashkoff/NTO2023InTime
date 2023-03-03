@@ -42,7 +42,7 @@ Material:
     m_Floats:
     - Vector1_8973e473451e4a62b21cd58a710f8cbd: 2
     - _Depth: 8.37
-    - _Displacement: 0.3
+    - _Displacement: 0.4
     - _Normal_Strength: 0
     - _Smoothness: 0.134
     - _Strength: 0.05

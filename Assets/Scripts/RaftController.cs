@@ -22,7 +22,6 @@ public class RaftController : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
-		Debug.Log(other.tag);
 		if (other.tag == "Terrain")
 		{
 			playerController.GameOver();
